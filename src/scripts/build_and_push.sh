@@ -19,5 +19,5 @@ echo "$IMAGE"
 
 docker build -t "$IMAGE" .
 aws ecr get-login-password --region=us-east-1 | docker login --username AWS --password-stdin "$REPOSITORY"
-docker tag saldo-plus:latest "$REPOSITORY/$IMAGE"
+docker tag "$IMAGE" "$REPOSITORY/$IMAGE"
 docker push "$REPOSITORY/$IMAGE"
