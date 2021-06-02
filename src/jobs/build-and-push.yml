@@ -6,7 +6,6 @@ executor: default
 parameters:
   image-name:
     type: string
-    default: ""
   image-tag:
     type: string
     default: ""
