@@ -1,0 +1,11 @@
+description: >
+  Default executor using Docker.
+docker:
+  - image: "docker:<< parameters.tag >>"
+parameters:
+  tag:
+    default: "17.05.0-ce-git"
+    description: >
+      Pick a specific docker image variant:
+      https://hub.docker.com/_/docker
+    type: string
