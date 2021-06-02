@@ -15,7 +15,6 @@ parameters:
     default: ""
 steps:
   - checkout
-  - aws-cli/setup
   - build-and-push:
       image-name: << parameters.image-name >>
       image-tag: << parameters.image-tag >>
