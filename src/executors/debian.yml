@@ -1,11 +1,11 @@
 description: >
   Default executor using Docker.
 docker:
-  - image: "docker:<< parameters.tag >>"
+  - image: "debian:<< parameters.tag >>"
 parameters:
   tag:
-    default: "17.05.0-ce-git"
+    default: "bullseye"
     description: >
       Pick a specific docker image variant:
-      https://hub.docker.com/_/docker
+      https://hub.docker.com/_/debian
     type: string

@@ -1,7 +1,7 @@
 description: >
   This job build and push docker image
 
-executor: docker
+executor: debian
 
 parameters:
   image-name:
