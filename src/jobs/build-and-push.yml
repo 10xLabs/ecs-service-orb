@@ -1,0 +1,21 @@
+description: >
+  This job build and push docker image
+
+executor: default
+
+parameters:
+  image-name:
+    type: string
+    default: ""
+  image-tag:
+    type: string
+    default: ""
+  repository:
+    type: string
+    default: ""
+steps:
+  - checkout
+  - build-and-push:
+      image-name: << parameters.image-name >>
+      image-tag: << parameters.image-tag >>
+      repository: << parameters.repository >>

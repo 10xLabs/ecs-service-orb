@@ -1,0 +1,20 @@
+description: >
+  This command build and push docker image
+parameters:
+  image-name:
+    type: string
+    default: ""
+  image-tag:
+    type: string
+    default: ""
+  repository:
+    type: string
+    default: ""
+steps:
+  - run:
+      name: Build and push docker image
+      environment:
+        IMAGE_NAME: << parameters.image-name >>
+        IMAGE_TAG: << parameters.image-tag >>
+        REPOSITORY: << parameters.repository >>
+      command: << include(scripts/build_and_push.sh) >>
