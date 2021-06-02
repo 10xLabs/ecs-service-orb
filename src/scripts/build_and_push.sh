@@ -12,12 +12,12 @@ fi
 
 IMAGE="$IMAGE_NAME:$IMAGE_TAG"
 
-echo $IMAGE_NAME
-echo $IMAGE_TAG
-echo $REPOSITORY
-echo $IMAGE
+echo "$IMAGE_NAME"
+echo "$IMAGE_TAG"
+echo "$REPOSITORY"
+echo "$IMAGE"
 
 docker build -t "$IMAGE" .
-aws ecr get-login-password --region=us-east-1 | docker login --username AWS --password-stdin $REPOSITORY
+aws ecr get-login-password --region=us-east-1 | docker login --username AWS --password-stdin "$REPOSITORY"
 docker tag saldo-plus:latest "$REPOSITORY/$IMAGE"
 docker push "$REPOSITORY/$IMAGE"
