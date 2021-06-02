@@ -2,7 +2,7 @@ if [ "$IMAGE_NAME" == "" ]; then
     IMAGE_NAME="$CIRCLE_PROJECT_REPONAME"
 fi
 if [ "$IMAGE_TAG" == "" ]; then
-    IMAGE_TAG=$(echo $CIRCLE_SHA1 | cut -c -7)
+    IMAGE_TAG=$(echo "$CIRCLE_SHA1" | cut -c -7)
 fi
 if [ "$REPOSITORY" == "" ]; then
     REGION=$(aws ec2 describe-availability-zones --output text --query 'AvailabilityZones[0].[RegionName]')
