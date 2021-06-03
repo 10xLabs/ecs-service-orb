@@ -4,8 +4,7 @@ parameters:
   environment:
     type: string
 steps:
-  - pulumi/install:
-      name: Install Pulumi CLI
+  - pulumi/install
   - run:
       name: Set stack name
       command: << include(scripts/set_stack_name.sh) >>
@@ -24,5 +23,4 @@ steps:
   - run:
       name: Set service image tag
       command: << include(scripts/set_service_image_tag.sh) >>
-  - pulumi/update:
-      name: Update infrastructure
+  - pulumi/update
