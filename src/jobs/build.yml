@@ -1,7 +1,7 @@
 description: >
   This job build docker image
 
-executor: default
+executor: go
 
 steps:
   - checkout
