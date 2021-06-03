@@ -1,1 +1,1 @@
-pulumi update --stack "$STACK_NAME" --cwd pulumi --refresh
+pulumi update --stack "$STACK_NAME" --cwd pulumi --refresh --yes
