@@ -7,7 +7,7 @@ steps:
   - pulumi/install:
       name: Install Pulumi CLI
 	- run:
-      name: Set stack name
+			name: Set stack name
       command: << include(scripts/set_stack_name.sh) >>
   - run:
       name: Set repository variables
