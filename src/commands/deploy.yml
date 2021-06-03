@@ -1,4 +1,4 @@
-description: >
+description: |
   This command deploy ECS service
 parameters:
   environment:
@@ -6,8 +6,8 @@ parameters:
 steps:
   - pulumi/install:
       name: Install Pulumi CLI
-	- run:
-			name: Set stack name
+  - run:
+      name: Set stack name
       command: << include(scripts/set_stack_name.sh) >>
   - run:
       name: Set repository variables
@@ -26,4 +26,3 @@ steps:
       command: << include(scripts/set_service_image_tag.sh) >>
   - pulumi/update:
       name: Update infrastructure
-# 
