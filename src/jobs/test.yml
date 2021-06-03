@@ -9,6 +9,5 @@ parameters:
     default: "85.00"
 steps:
   - checkout
-  - test
-  - check-coverage:
+  - test:
       minimum-coverage: << parameters.minimum-coverage >>
