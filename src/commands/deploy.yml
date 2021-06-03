@@ -26,3 +26,4 @@ steps:
       command: << include(scripts/set_service_image_tag.sh) >>
   - pulumi/update:
       name: Update infrastructure
+# 
