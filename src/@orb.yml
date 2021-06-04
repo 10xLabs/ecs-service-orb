@@ -1,7 +1,7 @@
 version: 2.1
 
 description: >
-  Test and build ECS Service written in Go
+  Test, build and deploy ECS Service written in Go
 
 display:
   home_url: "https://kolors.com.mx"
