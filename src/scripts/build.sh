@@ -1,0 +1,1 @@
+docker build -t "$CIRCLE_PROJECT_REPONAME" .

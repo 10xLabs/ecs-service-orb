@@ -1,0 +1,8 @@
+description: >
+  This job build docker image
+
+executor: go
+
+steps:
+  - checkout
+  - build

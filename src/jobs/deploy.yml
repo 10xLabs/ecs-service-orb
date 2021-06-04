@@ -1,0 +1,12 @@
+description: >
+  This job build, push and deploy docker image to AWS ECS
+
+executor: node
+
+parameters:
+  environment:
+    type: string
+steps:
+  - checkout
+  - deploy:
+      environment: << parameters.environment >>
