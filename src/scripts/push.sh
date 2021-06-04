@@ -5,3 +5,5 @@ docker build -t "$REPOSITORY_IMAGE" .
 aws ecr get-login-password --region=us-east-1 | docker login --username AWS --password-stdin "$REPOSITORY_ENDPOINT"
 docker tag "$REPOSITORY_IMAGE" "$REPOSITORY_ENDPOINT/$REPOSITORY_IMAGE"
 docker push "$REPOSITORY_ENDPOINT/$REPOSITORY_IMAGE"
+
+echo "export REPOSITORY_IMAGE_TAG=$REPOSITORY_IMAGE_TAG" >> "$BASH_ENV"
