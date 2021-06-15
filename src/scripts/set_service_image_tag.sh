@@ -1,1 +1,1 @@
-pulumi config set serviceImageTag "$REPOSITORY_IMAGE_TAG" --cwd pulumi --stack "$STACK_NAME"
+pulumi config set "service.imageTag" "$REPOSITORY_IMAGE_TAG" --cwd pulumi --stack "$STACK_NAME"
