@@ -1,5 +1,6 @@
 description: >
   This command build docker image
+
 steps:
   - setup_remote_docker:
       version: 19.03.13
