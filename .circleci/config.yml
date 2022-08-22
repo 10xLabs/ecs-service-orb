@@ -2,7 +2,7 @@ version: 2.1
 setup: true 
 orbs:
   # Replace this with your own!
-  aws-lambda-go: nexbus/aws-lambda-go@<< pipeline.parameters.dev-orb-version >>
+  ecs-service-go: nexbus/ecs-service-go@<< pipeline.parameters.dev-orb-version >>
   orb-tools: circleci/orb-tools@11.1.2
   bats: circleci/bats@1.0.0
   shellcheck: circleci/shellcheck@3.1.0
@@ -58,7 +58,7 @@ workflows:
               only: /.*/            
       # Publish development version(s) of the orb.
       - orb-tools/publish:
-          orb-name: nexbus/aws-lambda-go
+          orb-name: nexbus/ecs-service-go
           context: orb-publishing # A restricted context containing your private publishing credentials. Will only execute if approved by an authorized user.
           pub-type: dev
           vcs-type: << pipeline.project.type >>
