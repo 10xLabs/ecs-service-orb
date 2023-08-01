@@ -1,0 +1,41 @@
+description: >
+  This command create a preview of the Pulumi stack changes
+
+parameters:
+  working-directory:
+    type: string
+    default: deploy
+
+steps:
+  - run:
+      name: Install Pulumi CLI
+      environment:
+        WORKING_DIRECTORY: << parameters.working-directory >>
+      command: << include(scripts/install_pulumi.sh) >>
+  - run:
+      name: Set stack name
+      command: << include(scripts/set_stack_name.sh) >>
+  - run:
+      name: Set repository variables
+      environment:
+        WORKING_DIRECTORY: << parameters.working-directory >>
+      command: << include(scripts/set_repository_variables.sh) >>
+  - run:
+      name: Install AWS CLI
+      command: << include(scripts/install_aws_cli.sh) >>
+  - setup_remote_docker:
+      version: 19.03.13
+      docker_layer_caching: true
+  - run:
+      name: Build and push docker image
+      command: << include(scripts/push.sh) >>
+  - run:
+      name: Set service image tag
+      environment:
+        WORKING_DIRECTORY: << parameters.working-directory >>
+      command: << include(scripts/set_service_image_tag.sh) >>
+  - run:
+      name: Pulumi preview
+      environment:
+        WORKING_DIRECTORY: << parameters.working-directory >>
+      command: << include(scripts/pulumi_preview.sh) >>

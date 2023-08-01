@@ -1,0 +1,14 @@
+description: >
+  This job build, push and create a preview of the Pulumi stack changes
+
+executor: node
+
+parameters:
+  working-directory:
+    type: string
+    default: deploy
+
+steps:
+  - checkout
+  - preview:
+      working-directory: << parameters.working-directory >>

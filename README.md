@@ -1,7 +1,6 @@
 # Orb Project Template
 
-[![CircleCI Build Status](https://circleci.com/gh/10xLabs/ecs-service-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/10xLabs/ecs-service-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/nexbus/ecs-service.svg)](https://circleci.com/orbs/registry/orb/nexbus/ecs-service) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/10xLabs/ecs-service-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
-
+[![CircleCI Build Status](https://dl.circleci.com/status-badge/img/gh/10xLabs/ecs-service-go-orb/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/10xLabs/ecs-service-go-orb/tree/master) [![CircleCI Orb Version](https://badges.circleci.com/orbs/nexbus/ecs-service-go.svg)](https://circleci.com/orbs/registry/orb/nexbus/ecs-service) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/10xLabs/ecs-service-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
 
 A starter template for orb projects. Build, test, and publish orbs automatically on CircleCI with [Orb-Tools](https://circleci.com/orbs/registry/orb/circleci/orb-tools).
