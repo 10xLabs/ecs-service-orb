@@ -14,9 +14,9 @@ workflows:
             tags:
               only: /.*/
       - orb-tools/publish:
-          orb-name: nexbus/ecs-service-go
-          vcs-type: <<pipeline.project.type>>
-          pub-type: production
+          orb_name: nexbus/ecs-service-go
+          vcs_type: <<pipeline.project.type>>
+          pub_type: production
           requires:
             [orb-tools/lint, orb-tools/pack]
           context: orb-publishing

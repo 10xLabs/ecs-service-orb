@@ -24,7 +24,7 @@ steps:
       name: Install AWS CLI
       command: << include(scripts/install_aws_cli.sh) >>
   - setup_remote_docker:
-      version: 19.03.13
+      version: edge
       docker_layer_caching: true
   - run:
       name: Build and push docker image

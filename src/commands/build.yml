@@ -3,6 +3,7 @@ description: >
 
 steps:
   - setup_remote_docker:
+      version: edge
       docker_layer_caching: true
   - run:
       name: Build docker image
