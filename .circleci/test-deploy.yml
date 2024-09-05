@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  orb-tools: circleci/orb-tools@11.1.2
+  orb-tools: circleci/orb-tools@12.1.0
 
 workflows:
   test-deploy:
@@ -17,10 +17,8 @@ workflows:
           orb_name: nexbus/ecs-service-go
           vcs_type: <<pipeline.project.type>>
           pub_type: production
-          requires:
-            [orb-tools/lint, orb-tools/pack]
+          requires: [orb-tools/lint, orb-tools/pack]
           context: orb-publishing
-          enable-pr-comment: false
           filters:
             branches:
               ignore: /.*/
